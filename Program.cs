@@ -52,14 +52,14 @@ namespace StringTutorial
             string reversedString = stringArray.ToString();
             string secretString = "Secret-" + reversedString + "-Code";
             // String conversion using ASCII values to shift each character by 1
-            char[] finalEncryptionChars = null;
+            char[] charArray = [];
             foreach (char c in secretString)
             {
                 int ASCII = (int)c + 1;
-                finalEncryptionChars.Append((char)ASCII);
+                charArray.Append((char)ASCII);
             }
-
-            string finalEncryption = new string(finalEncryptionChars);
+            string finalEncryptionChars = string.Join("", charArray);
+            string finalEncryption = finalEncryptionChars;
             return finalEncryption;
         }
     }
